@@ -1,0 +1,75 @@
+#include <stdio.h>
+int main()
+{
+    
+    int i,j,sum=0,k;
+    int a[100][100];
+    int b[90][90],c[10][10];
+    int m,n,p,q;
+    printf("enter size of a matrix ");
+    scanf("%d%d",&m,&n);
+    printf("enter size of 2nd matrix");
+   scanf("%d%d",&p,&q);
+    printf("enter element of a matrix");
+    for(i=0;i<m;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+   printf("enter elements of b matrix\n");
+   for(i=0;i<p;i++)
+    {
+        for(j=0;j<q;j++)
+        {
+            scanf("%d",&b[i][j]);
+        }
+    }
+    printf("a matrix is\n");
+    for(i=0;i<m;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+    printf("b matrix is\n");
+    for(i=0;i<p;i++)
+    {
+        for(j=0;j<q;j++)
+        {
+            printf("%d ",b[i][j]);
+        }
+        printf("\n");
+    }
+    if(n!=p)
+    {
+        printf("product is not possible");
+    }
+    else
+    {
+    printf("ressultance product matrix is\n");
+    for(i=0;i<m;i++)
+    {
+        for(j=0;j<n;j++){
+          int  sum=0;
+      for(k=0;k<q;k++)
+      {
+         sum=sum+a[i][k]*b[k][j];
+         c[i][j]=sum;
+      }
+        }
+        
+    }
+    for(i=0;i<m;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            printf("%d ",c[i][j]);
+        } 
+        printf("\n");
+    }}
+       return 0;
+}
