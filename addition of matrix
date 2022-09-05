@@ -1,0 +1,54 @@
+#include <stdio.h>
+int main()
+{
+    
+    int i,j,sum=0,con=0;
+    int a[100][100];
+    int b[90][90],c[10][10];
+    int m,n;
+    scanf("%d%d",&m,&n);
+    for(i=0;i<m;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+   
+   for(i=0;i<m;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&b[i][j]);
+        }
+    }
+    printf("a matrix is\n");
+    for(i=0;i<m;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+    printf("b matrix is\n");
+    for(i=0;i<m;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            printf("%d ",b[i][j]);
+        }
+        printf("\n");
+    }
+    printf("ressultance add matrix is\n");
+    for(i=0;i<m;i++)
+    {
+        for(j=0;j<n;j++){
+        c[i][j]=a[i][j]+b[i][j];
+        
+        printf("%d ",c[i][j]);
+    }
+        printf("\n");
+    }
+       return 0;
+}
