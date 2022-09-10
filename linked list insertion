@@ -1,0 +1,34 @@
+int display()
+{
+	struct node *ptr;
+	ptr=head;
+	if(ptr==NULL)
+		printf(" There are no nodes in the list \n");
+	else
+	{
+		printf("Elements in the list are .... \n");
+		while(ptr!=NULL)
+		{
+			printf("%d ",ptr->data);
+			ptr=ptr->ref;
+		}
+	}
+}
+
+int binsert()// function definition or body
+{	struct node *ptr;
+	int ele;
+	ptr=(struct node*)malloc(sizeof(struct node));
+	
+	if(ptr==NULL)
+		printf(" We can't insert any elements \n");
+	else
+	{
+		printf("Enter any element to insert \n");
+		scanf("%d",&ele);
+		ptr->data=ele;
+		ptr->ref=head;
+		head=ptr;
+		printf("Element is inserted successfully \n");
+	}
+}
