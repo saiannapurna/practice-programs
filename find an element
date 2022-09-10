@@ -1,0 +1,33 @@
+
+#include <stdio.h>
+#include<conio.h>
+int main()
+{
+    int a[200],n,i,key,flag=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    printf("\nenter eement to search");
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        if(n==a[i])
+        {
+            flag=1;
+            break;
+        }
+    }
+    if(flag==1)
+    {
+        printf("element found");
+    }
+    else
+    printf("not found");
+    return 0;
+}
